@@ -1,0 +1,157 @@
+* {
+	margin: 0; /* зовнішній відступ навколо елемента*/
+	padding: 0; /* внутрішній відступ навколо вмісту елемента */
+	box-sizing: border-box; /* розмір блоку */
+}
+:root {
+	--index: calc(1vw + 1vh); /*задання значень стовпцям та рядкам*/
+	--color-header: #f4efec; /*колір шапки  сайту*/
+	--color-text: #cdc6c3; /*колір тексту*/
+	--gallery-gap: calc(var(--index) * 7.5) /*проміжок між стовпчиками*/
+}
+@font-face {
+	font-family: raleway-c; /*шрифт*/
+	src: url(../fonts/raleway-regular.woff2); /*посилання на шрифт*/
+}
+@font-face {
+	font-family: outfit-c; /*шрифт*/
+	src: url(../fonts/outfit-regular.woff2); /*посилання на шрифт*/
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c; /*шрифт*/
+}
+
+.content, .diva, .main-header, .gallery > * {
+	will-change: transform; /*елемент буде анімований*/
+}
+body {
+	background-image: url(../img/ks.gif); /* фон сторінки*/
+	background-size: 1000px; /* розмір фону*/
+	color: #fafafa; /* колір */
+	font-family: raleway-c; /* шрифт */
+	overflow-x: hidden; /*відображення змісту блокового елементу по горизонталі*/
+}
+.diva {
+	width: calc(var(--index) * 36); /*ширина*/
+	position: absolute; /*яка завгодно позиція*/
+	left: 37vw; /*ліворуч*/
+	top: 22vh;/*зверху*/
+	z-index: -1; /*порядок стека елемента*/
+}
+.main-header {
+	height: 100vh; /*висота*/
+}
+.container {
+	padding: 0 7vw;/*внутрішній відступ навколо вмісту елемента*/
+}
+.main-title {
+	font-size: calc(var(--index) * 8); /*шрифт*/
+	position: absolute;/*позиція*/
+	width: min-content;/*ширина*/
+	bottom: 12vh;/*низ*/
+	line-height: .9;/*висота рядка*/
+}
+.gallery {
+	display: flex;/*вказує параметри елемента*/
+	padding: calc(var(--index) * 8) 0;/*внутрішній відступ навколо вмісту елемента*/
+}
+.gallery > * { 
+	flex: 1; /*параметри елемента*/
+	display: flex; /*визначає контейнер*/
+	align-items: center; /*вирівнювання елментів по центру*/
+	flex-direction: column; /*напрямок головної осі батьківського контейнера*/
+}
+.gallery__item {
+	max-width: calc(var(--index) * 21);/*максимальна ширина*/
+	margin-bottom: var(--gallery-gap);/*відступ від нижнього краю елементу*/
+	max-height: 180vh;/*максимальна висота*/
+	border-radius: 8px; /*округлення всіх кутів*/
+}
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 1.75);/*відступ від верхнього краю елементу*/
+}
+.gallery__right .gallery__item {
+	margin: 0;/* зовнішній відступ навколо елемента*/
+	margin-top: var(--gallery-gap);/*відступ від верхнього краю елементу*/
+}
+.text-block {
+	color: var(--color-text);/*колір*/
+	position: relative;/*позиція за замовчуванням*/
+}
+.text-block__h {
+	font-size: 2rem;/*шрифт*/
+	line-height: 2.4rem;/*висота рядка*/
+	color: var(--color-header);/*колір*/
+	margin-bottom: 1.5rem;/*відступ від нижнього краю елементу*/
+}
+.text-block__p {
+	line-height: 1.75;/*висота рядка*/
+}
+
+.registration {
+	display: flex;/*визначає контейнер*/
+	flex-direction: column;/*напрямок головної осі батьківського контейнера*/
+	align-items: center;/*вирівнювання елментів по центру*/
+}
+
+gif-container {
+	position: relative;/*позиція за замовчуванням*/
+	text-align: center;/*текст по центру*/
+}
+
+.gif-container img {
+	display: block;/*визначає контейнер*/
+	width: 100%;/*ширина*/
+}
+
+.gif-container p {
+	position: relative;/*позиція за замовчуванням*/
+	transform: translate(17%, -435%);/*зміщення елемента з початкової точки*/
+	font-weight: bold;/*товщина шрифта*/
+	color: black;/*колір*/
+	font-family: Algerian, "Times New Roman";/*шрифт*/
+	font-size: 25px;/*розмір шрифту*/
+}
+
+.logotip {
+	position: absolute;/*яка завгодно позиція*/
+	bottom: 95px;/*низ*/
+	left: 230px;/*ліворуч*/
+	width: 10%;/*ширина*/
+	height: auto;/*висота, що відповідає ширині*/
+}
+
+a {
+	color: #ffffff; /*колір звичайного посилання*/
+	text-decoration: none; /*прибране підкреслення у посилань*/
+	transition: 1s linear;/*перехід*/
+	}
+	a:hover {
+		color: #000000; /*колір посилання при наведенні на нього курсора миші*/
+}
+
+.pro {
+	position: absolute;/*яка завгодно позиція*/
+	bottom: 95px;/*низ*/
+	right: 230px;/*зправа*/
+	width: 145px;/*ширина*/
+	height: auto;/*висота, що відповідає ширині*/
+}
+
+@media (max-width: 412px) {
+	.gallery {
+		display: flex;
+	flex-direction: column;
+}
+.registration {
+	transform: translate(0px, 1600px);
+}
+.logotip {
+width: 35%;
+transform: translate(-200px, 1350px);
+}
+.pro {
+width: 35%;
+transform: translate(200px, 1350px);
+}
+}

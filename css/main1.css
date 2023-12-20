@@ -1,0 +1,66 @@
+body {
+	background-image: url(../img/r.jpg);/*фон*/
+	background-size: 50px;/*розмір фону*/
+	color: #fafafa;/*колір*/
+	font-family: raleway-c;/*шрифт*/
+	overflow-x: hidden;/*відображення змісту блокового елементу по горизонталі*/
+}
+body, html {
+height: 100%;/*висота*/
+margin: 0;/* зовнішній відступ навколо елемента*/
+display: flex;/*визначає контейнер*/
+justify-content: center;/*вирівнювання по центру елемнтів гнучкого контейнера*/
+align-items: center;/*вирівнювання елментів по центру*/
+}
+
+.container {
+    position: relative;/*позиція по замовчуванню*/
+    text-align: center;/*текст по центру*/
+}
+
+.jumping-image {
+    height: 500px;/*висота*/
+    width: 500px;/*ширина*/
+    position: relative;/*позиція по замовчуванню*/
+    top: 0;/*верх*/
+    animation: jump 0.5s infinite alternate;/*анімація стрибків*/
+}
+
+.centered-gif {
+    position: fixed;/*позиція завжди на одному місці*/
+    top: 0;/*верх*/
+    left: 0;/*ліворуч*/
+    width: 100%;/*ширина*/
+    height: 100%;/*висота*/
+    object-fit: cover;/*визначення змін розміру елемента для вміщення в блок*/
+    z-index: 9999;/*на весь екран*/
+}
+
+.blinking-text{
+    animation: blink 1s infinite;/*анімація миготіння*/
+    font-size: 40px;/*розмір шрифту*/
+    font-weight: bold;/*товщина шрифта*/
+    color: blueviolet;/*колір*/
+}
+
+@keyframes jump {
+    0% {
+        top: 0;/*зміщення вгору*/
+    }
+    100% {
+        top: -20px;/*зміщення вгору*/
+    }
+}
+
+@keyframes blink {
+    0%{
+        opacity: 1;/*інтенсивність*/
+    }
+    50% {
+        opacity: 0;/*інтенсивність*/
+    }
+    100% {
+        opacity: 1;/*інтенсивність*/
+    }
+}
+ 

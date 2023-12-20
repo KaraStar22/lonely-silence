@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');/*імпорт шрифту*/
+*{
+    margin: 0;/* зовнішній відступ навколо елемента*/
+    padding: 0; /*внутрішній відступ навколо вмісту елемента*/
+    font-family: 'poppins',sans-serif; /*шрифт*/
+}
+section{
+    display: flex;/*визначає контейнер*/
+    justify-content: center;/*вирівнювання по центру елемнтів гнучкого контейнера*/
+    align-items: center;/*вирівнювання елментів по центру*/
+    min-height: 100vh;/*мінімальна висота*/
+    width: 100%;/*ширина*/
+    
+    background: url('../img/im.gif')no-repeat;/*фон*/
+    background-position: center;/*позиція по центру*/
+    background-size: cover;/*розмір для фонового зображення*/
+}
+.form-box{
+    position: relative;/*позиція по замовчуванню*/
+    width: 400px;/*ширина*/
+    height: 450px;/*висота*/
+    background: transparent;/*колір фону прозорий*/
+    border: 2px solid rgba(255,255,255,0.5);/*рамка*/
+    border-radius: 20px;/*округлення всіх кутів*/
+    backdrop-filter: blur(15px);/*фільтр розмиття*/
+    display: flex;/*визначає контейнер*/
+    justify-content: center;/*вирівнювання по центру елемнтів гнучкого контейнера*/
+    align-items: center;/*вирівнювання елментів по центру*/
+
+}
+h2{
+    font-size: 2em;/*розмір шрифту*/
+    color: #fff;/*колір*/
+    text-align: center;/*розміщення тексту по центру*/
+}
+.inputbox{
+    position: relative;/*позиція по замовчуванню*/
+    margin: 30px 0;/* зовнішній відступ навколо елемента*/
+    width: 310px;/*ширина*/
+    border-bottom: 2px solid #fff;/*нижня границя рамки*/
+}
+.inputbox label{
+    position: absolute;/*яка завгодно позиція*/
+    top: 50%;/*відступ зверху*/
+    left: 5px;/*відступ зліва*/
+    transform: translateY(-50%);/*зміщення елемента з початкової точки*/
+    color: #fff;/*колір*/
+    font-size: 1em;/*розмір шрифту*/
+    pointer-events: none;/*елемент перестає реагувати*/
+    transition: .5s;
+}
+input:focus ~ label,/*встановлення стилів коли поле вводу має фокус */
+input:valid ~ label{/*встановлення стилів коли вміст поля вводу є дійсним*/
+top: -5px;/*верх*/
+}
+.inputbox input {
+    width: 100%;/*ширина*/
+    height: 50px;/*висота*/
+    background: transparent;/*колір фону прозорий*/
+    border: none;/*рамки немає*/
+    outline: none;/*зовнішнього контуру немає*/
+    font-size: 1em;/*розмір шрифту*/
+    padding:0 35px 0 5px;/*внутрішній відступ навколо вмісту елемента*/
+    color: #fff;
+}
+.inputbox ion-icon{
+    position: absolute;/*яка завгодно позиція*/
+    right: 8px;/*відступ зправа*/
+    color: #fff;/*колір*/
+    font-size: 1.2em;/*розмір шрифту*/
+    top: 20px;/*відступ зверху*/
+}
+.forget{
+    margin: -15px 0 15px;/* зовнішній відступ навколо елемента*/
+    font-size: .9em;/*розмір шрифту*/
+    color: #fff;/*колір*/
+    display: flex;/*визначає контейнер*/
+    justify-content: space-between;  /*розподіл простору вздовж головної осі*/
+}
+
+.forget label input{
+    margin-right: 3px;/*зовнішній відступ зправа*/
+    
+}
+.forget label a{
+    color: #fff;/*колір*/
+    text-decoration: none;/*підкреслення немає*/
+}
+.forget label a:hover{
+    text-decoration: underline;/*підкреслення*/
+}
+button{
+    width: 100%;/*ширина*/
+    height: 40px;/*висота*/
+    border-radius: 40px;/*округлення всіх кутів*/
+    background: #fff;/*колір фону*/
+    border: none;/*рамки немає*/
+    outline: none;/*зовнішнього контуру немає*/
+    cursor: pointer;/*показує, що елемент активний*/
+    font-size: 1em;/*розмір шрифту*/
+    font-weight: 600;/*товщина шрифта*/
+}
+.register{
+    font-size: .9em;/*розмір шрифту*/
+    color: #fff;/*колір*/
+    text-align: center;/*розміщення тексту по центру*/
+    margin: 25px 0 10px;/*зовнішній відступ навколо елемента*/
+}
+.register p a{
+    text-decoration: none;/*підкреслення немає*/
+    color: #fff;/*колір*/
+    font-weight: 600;/*товщина шрифта*/
+}
+.register p a:hover{
+    text-decoration: underline;/*підкрслення*/
+}
